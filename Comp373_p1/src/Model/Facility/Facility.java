@@ -11,11 +11,11 @@ import java.util.List;
 
 public interface Facility {
 
-    void setRequests(List<Requests> requests);
+    void setRequests(List<Request> requests);
 
-    void setReservations(List<Reservations> reservations);
+    void setReservations(List<Reservation> reservations);
 
-    void setAddress(Addresses address);
+    void setAddress(Address address);
 
     void setName(String name);
 
@@ -23,15 +23,15 @@ public interface Facility {
 
     void setCurrentCapacity(int capacity);
 
-    void addRequest(Requests request);
+    void addRequest(Request request);
 
-    void addReservation(Reservations reservation);
+    void addReservation(Reservation reservation);
 
-    List<Requests> getRequests();
+    List<Request> getRequests();
 
-    List<Reservations> getReservations();
+    List<Reservation> getReservations();
 
-    Addresses getAddress();
+    Address getAddress();
 
     String getName();
 

@@ -1,4 +1,4 @@
-package com.ebook.use;
+package Model.Use;
 
 import java.util.Date;
 
@@ -42,25 +42,24 @@ public class use {
     }
 
     //returns amount of inspections for a facility
-    public getInspections(){
+    public int getInspections(){
         return amtInspections;
     }
 
     //prints amount of inspections for a facility
     public void listInspections(){
-        system.out.println("This facility had " + amtInspections);
+        System.out.println("This facility had " + amtInspections);
 
     }
 
     //returns amount times facility had been used
-    public getUsage(){
+    public int getUsage(){
         return usage;
     }
-
     //lists amount of usage of the building and if its vacant
     public void listActualUsage(){
-        system.out.println("This facility was used annually" + usage);
-        system.out.println("Is this facility vacant? " + vacant);
+        System.out.println("This facility was used annually" + usage);
+        System.out.println("Is this facility vacant? " + vacant);
     }
 
 

@@ -3,6 +3,7 @@ package Model;
 import Model.Address.Address;
 import Model.Address.Addresses;
 import Model.Facility.Facilities;
+import Model.Facility.Facility;
 import Model.Maintenance.Request;
 import Model.Maintenance.Requests;
 import Model.Reservation.Reservation;
@@ -13,15 +14,20 @@ import java.util.List;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
 
+        Facility facility = new Facilities();
 
-        List<Requests> requests = null;
-        List<Reservations> reservations = null;
+        List<Request> requests = null;
+        List<Reservation> reservations = null;
 
         FacilityService facilityService = new FacilityService();
 
-        Facilities facility = new Facilities();
+        facilityService.setFacility(facility);
+
+
 
 
 

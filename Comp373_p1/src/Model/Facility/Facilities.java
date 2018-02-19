@@ -11,22 +11,22 @@ import java.util.List;
 
 public class Facilities implements Facility {
 
-    private List<Requests> requests;
-    private List<Reservations> reservations;
-    private Addresses address;
+    private List<Request> requests;
+    private List<Reservation> reservations;
+    private Address address;
     private String name;
     private int capacity;
     private int currentCapacity;
 
-    public void setRequests(List<Requests> requests) {
+    public void setRequests(List<Request> requests) {
         this.requests = requests;
     }
 
-    public void setReservations(List<Reservations> reservations) {
+    public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
 
-    public void setAddress(Addresses address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -42,15 +42,15 @@ public class Facilities implements Facility {
         this.currentCapacity = currentCapacity;
     }
 
-    public List<Requests> getRequests() {
+    public List<Request> getRequests() {
         return requests;
     }
 
-    public List<Reservations> getReservations() {
+    public List<Reservation> getReservations() {
         return reservations;
     }
 
-    public Addresses getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -66,11 +66,11 @@ public class Facilities implements Facility {
         return currentCapacity;
     }
 
-    public void addRequest(Requests request) {
+    public void addRequest(Request request) {
         requests.add(request);
     }
 
-    public void addReservation(Reservations reservation) {
+    public void addReservation(Reservation reservation) {
         reservations.add(reservation);
     }
 }
