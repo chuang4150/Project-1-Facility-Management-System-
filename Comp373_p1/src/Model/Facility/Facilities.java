@@ -11,12 +11,17 @@ import java.util.List;
 
 public class Facilities implements Facility {
 
+    private  List<Facility> facilities;
     private List<Request> requests;
     private List<Reservation> reservations;
     private Address address;
     private String name;
     private int capacity;
     private int currentCapacity;
+
+    public void setFacilities(List<Facility> facilities){
+        this.facilities = facilities;
+    }
 
     public void setRequests(List<Request> requests) {
         this.requests = requests;
@@ -50,6 +55,10 @@ public class Facilities implements Facility {
         return reservations;
     }
 
+    public List<Facility> getFacilities(){
+        return facilities;
+    }
+
     public Address getAddress() {
         return address;
     }
@@ -72,5 +81,9 @@ public class Facilities implements Facility {
 
     public void addReservation(Reservation reservation) {
         reservations.add(reservation);
+    }
+
+    public void addFacility(Facility facility){
+        facilities.add(facility);
     }
 }

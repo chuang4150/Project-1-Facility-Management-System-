@@ -11,6 +11,8 @@ import java.util.List;
 
 public interface Facility {
 
+    void setFacilities(List<Facility> facilities);
+
     void setRequests(List<Request> requests);
 
     void setReservations(List<Reservation> reservations);
@@ -23,9 +25,13 @@ public interface Facility {
 
     void setCurrentCapacity(int capacity);
 
+    void addFacility(Facility facility);
+
     void addRequest(Request request);
 
     void addReservation(Reservation reservation);
+
+    List<Facility> getFacilities();
 
     List<Request> getRequests();
 

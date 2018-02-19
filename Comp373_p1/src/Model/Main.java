@@ -23,14 +23,6 @@ public class Main {
         List<Request> requests = null;
         List<Reservation> reservations = null;
 
-        FacilityService facilityService = new FacilityService();
-
-        facilityService.setFacility(facility);
-
-
-
-
-
         facility.setName("Doyle Hall");
         facility.setCapacity(50);
         facility.setCurrentCapacity(facility.getCapacity());
