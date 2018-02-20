@@ -1,12 +1,13 @@
 package Model.Maintenance;
 
-import java.sql.Time;
+import java.util.Date;
+
 
 public interface Request {
 
     void setDescription(String description);
 
-    void setTime(Time time);
+    void setTime(Date time);
 
     void setCost(int cost);
 
@@ -16,7 +17,7 @@ public interface Request {
 
     String getDescription();
 
-    Time getTime();
+    Date getTime();
 
     int getCost();
 

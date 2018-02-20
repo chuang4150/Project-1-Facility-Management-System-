@@ -1,17 +1,18 @@
 package Model.Maintenance;
 
-import java.sql.Time;
+import java.util.Date;
+
 
 public class Requests implements Request {
 
 
-    private Time time;
+    private Date time;
     private String description;
     private int cost;
     private int downTime;
     private boolean status;
 
-    public void setTime(Time time){
+    public void setTime(Date time){
         this.time = time;
     }
 
@@ -31,7 +32,7 @@ public class Requests implements Request {
         this.status = status;
     }
 
-    public Time getTime(){
+    public Date getTime(){
         return time;
     }
 
