@@ -1,58 +1,46 @@
+package data;
 
+import Model.Address.Address;
+import Model.Address.Addresses;
 import Model.Facility.Facilities;
 import Model.Facility.Facility;
+import Model.Maintenance.Request;
+import Model.Reservation.Reservation;
+import Model.Service.RequestService;
+import Model.Service.ReservationService;
+
+import java.util.List;
 
 public class facilityList{
 
-    Facility facility = new Facilities();
+    public static void database() {
 
-    List<Request> requests = null;
-    List<Reservation> reservations = null;
 
-    facility.setName("Doyle Hall");
-    facility.setCapacity(50);
-    facility.setCurrentCapacity(facility.getCapacity());
-    facility.setRequests(requests);
-    facility.setReservations(reservations);
 
-    Facility facility1 = new Facilities();
-    List<Request> requests = null;
-    List<Reservation> reservations = null;
 
-    facility1.setName("De Nobili Hall");
-    facility1.setCapacity(100);
-    facility1.setCurrentCapacity(facility1.getCapacity());
-    facility1.setRequests(requests);
-    facility1.setReservations(reservations);
+        Facility facility = new Facilities();
 
-    Facility facility2 = new Facilities();
-    List<Request> requests = null;
-    List<Reservation> reservations = null;
+        List<Request> requests = null;
+        List<Reservation> reservations = null;
 
-    facility2.setName("Mertz Hall");
-    facility2.setCapacity(300);
-    facility2.setCurrentCapacity(facility2.getCapacity());
-    facility2.setRequests(requests);
-    facility2.setReservations(reservations);
 
-    Facility facility3 = new Facilities();
-    List<Request> requests = null;
-    List<Reservation> reservations = null;
+        facility.setName("Doyle Hall");
+        facility.setCapacity(50);
+        facility.setCurrentCapacity(facility.getCapacity());
+        facility.setRequests(requests);
+        facility.setReservations(reservations);
 
-    facility3.setName("Bellarmine Hall");
-    facility3.setCapacity(220);
-    facility3.setCurrentCapacity(facility.getCapacity());
-    facility3.setRequests(requests);
-    facility3.setReservations(reservations);
+        Address address = new Addresses();
 
-    Facility facility4 = new Facilities();
-    List<Request> requests = null;
-    List<Reservation> reservations = null;
+        address.setAddress1("1040 West Granville Ave.");
+        address.setAddress2("N/A");
+        address.setCity("Chicago");
+        address.setState("IL");
+        address.setZip(60660);
 
-    facility4.setName("Georgetown");
-    facility4.setCapacity(193);
-    facility4.setCurrentCapacity(facility4.getCapacity());
-    facility4.setRequests(requests);
-    facility4.setReservations(reservations);
+        facility.setAddress(address);
 
+
+
+    }
 }

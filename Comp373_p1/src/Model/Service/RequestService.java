@@ -36,5 +36,15 @@ public class RequestService {
         return cost;
     }
 
+    public int calcDownTime(Facility facility){
+        int time = 0;
+        List<Request> requests = facility.getRequests();
+        for (int i = 0; i < requests.size(); i++){
+            if (requests.get(i).getStatus() == false){
+                time += requests.get(i).getDownTime();
+            }
+        }
+        return time;
+    }
 
 }

@@ -7,9 +7,12 @@ import Model.Facility.Facility;
 import Model.Maintenance.Request;
 import Model.Maintenance.Requests;
 import Model.Reservation.Reservation;
-import Model.Reservation.Reservations;
-import Model.Service.FacilityService;
+import Model.Service.RequestService;
+import Model.Service.ReservationService;
+import data.facilityList;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Main {
@@ -20,8 +23,13 @@ public class Main {
 
         Facility facility = new Facilities();
 
-        List<Request> requests = null;
-        List<Reservation> reservations = null;
+        RequestService requestService = new RequestService();
+
+        ReservationService reservationService = new ReservationService();
+
+        List<Request> requests = new ArrayList<>();
+        List<Reservation> reservations = new ArrayList<>();
+
 
         facility.setName("Doyle Hall");
         facility.setCapacity(50);
@@ -29,7 +37,7 @@ public class Main {
         facility.setRequests(requests);
         facility.setReservations(reservations);
 
-        Addresses address = new Addresses();
+        Address address = new Addresses();
 
         address.setAddress1("1040 West Granville Ave.");
         address.setAddress2("N/A");
@@ -39,6 +47,23 @@ public class Main {
 
         facility.setAddress(address);
 
+        Request request = new Requests();
+
+        request.setStatus(false);
+        request.setDownTime(5);
+        request.setCost(500);
+        request.setDescription("Heating Broken");
+        request.setTime(Calendar.getInstance().getTime());
+
+        requestService.addRequest(request,facility);
+
+        reservationService.assignFacilityToUse(Calendar.getInstance().getTime(),Calendar.getInstance().getTime(),
+               facility, "David Saffo", "Study");
+
+
+
+
+
         System.out.println(facility.getName());
         System.out.println(facility.getCapacity());
         System.out.println(facility.getCurrentCapacity());
@@ -47,6 +72,9 @@ public class Main {
         System.out.println(facility.getAddress().getCity());
         System.out.println(facility.getAddress().getState());
         System.out.println(facility.getAddress().getZip());
+        System.out.println(requestService.calcCost(facility));
+        System.out.println(requestService.calcDownTime(facility));
+
 
 
 
